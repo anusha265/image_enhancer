@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Enhancer</title>
+</head>
+<body>
+    <h1>Image Enhancer</h1>
+    <form method="post" action="{% url 'process_image' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="image" accept="image/*" required><br><br>
+        <input type="submit" value="Enhance">
+    </form>
+</body>
+</html>
